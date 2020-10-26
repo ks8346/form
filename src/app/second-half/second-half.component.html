@@ -1,0 +1,12 @@
+<form #employeeForm="ngForm" (onSubmit)="onSubmit()">
+<div class="form-group">
+    <label>Interests</label>
+    <input type="text" class="form-control" name="interests" placeholder="eg Football, Baseball etc." [(ngModel)]="employeeModel.interests">
+  </div>
+  <div class="form-group">
+    <label>Joining</label>
+    <input type="Date" class="form-control" name="joining" placeholder="yyyy-mm-dd" min="2000-01-01" [(ngModel)]="employeeModel.joining">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid" (click)="onSubmit()">Submit</button>
+  
+</form>
